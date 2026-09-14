@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Profil auf 100 %</title>
-<meta name="description" content="Vorschlag für die Danke-Seite der Bewerber-Landingpage: nach dem Kontakt-Formular soll der Bewerber sehen, dass es weitergeht – Vorher/Nachher mit drei Varianten.">
+<meta name="description" content="Vorschlag für die Danke-Seite der Bewerber-Landingpage: nach dem Kontakt-Formular soll der Bewerber sehen, dass es weitergeht – Vorher/Nachher.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#16A34A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,22 +14,19 @@
 /* ---------- Seiten-Rahmen (hell/dunkel) ---------- */
 :root{
   --bg:#f2f5f2; --card:#ffffff; --ink:#14181c; --soft:#5b6570; --line:#dfe5e0;
-  --acc:#16A34A; --acc-ink:#0E5F2E; --acc-soft:#e6f6ec;
-  --warn:#9a5b00; --warn-bg:#fff5e0; --warn-line:#f2d9a6;
+  --acc:#16A34A; --acc-ink:#0E5F2E;
   --bezel:#1a1f1c; --bezel-line:transparent;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0f1411; --card:#161c18; --ink:#eef2ee; --soft:#a2aca5; --line:#26302a;
-    --acc:#22c55e; --acc-ink:#86efac; --acc-soft:#14301f;
-    --warn:#fbbf24; --warn-bg:#2a2210; --warn-line:#4a3a12;
+    --acc:#22c55e; --acc-ink:#86efac;
     --bezel:#2a312c; --bezel-line:#3a433d;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0f1411; --card:#161c18; --ink:#eef2ee; --soft:#a2aca5; --line:#26302a;
-  --acc:#22c55e; --acc-ink:#86efac; --acc-soft:#14301f;
-  --warn:#fbbf24; --warn-bg:#2a2210; --warn-line:#4a3a12;
+  --acc:#22c55e; --acc-ink:#86efac;
   --bezel:#2a312c; --bezel-line:#3a433d;
 }
 *{margin:0;padding:0;box-sizing:border-box}
@@ -50,7 +47,6 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 .col-now{order:2}.col-new{order:1}
 @media (min-width:900px){.col-now{order:1}.col-new{order:2}}
 .col-cap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;width:100%;max-width:390px;min-height:38px}
-@media (max-width:480px){.tabs button{padding:6px 9px;font-size:12px}}
 .pill{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:6px 11px;border-radius:999px;border:1.5px solid var(--line);color:var(--soft)}
 .pill.new{background:var(--acc);border-color:var(--acc);color:#fff}
 .col-cap small{font-size:12.5px;color:var(--soft);font-weight:500}
@@ -59,11 +55,11 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 .tabs button{font-family:inherit;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:999px;border:0;background:transparent;color:var(--soft);cursor:pointer}
 .tabs button[aria-selected="true"]{background:var(--ink);color:var(--card)}
 .tabs button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+@media (max-width:480px){.tabs button{padding:6px 9px;font-size:12px}}
 
 .why{width:100%;max-width:390px;font-size:13.5px;color:var(--soft);font-weight:500;line-height:1.5;min-height:42px}
 .why b{color:var(--ink);font-weight:700}
 .why[hidden]{display:none}
-.warnbox{width:100%;max-width:390px;font-size:13px;font-weight:600;color:var(--warn);background:var(--warn-bg);border:1.5px solid var(--warn-line);border-radius:12px;padding:10px 12px;line-height:1.45}
 
 /* ---------- Telefon-Rahmen ---------- */
 .ph{width:390px;max-width:100%;border-radius:46px;background:var(--bezel);border:1px solid var(--bezel-line);padding:10px;box-shadow:0 30px 60px rgba(10,20,14,.22),0 2px 6px rgba(10,20,14,.18)}
@@ -78,6 +74,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 .scr .prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:700;color:#5b6570;letter-spacing:.03em;text-transform:uppercase;margin-bottom:7px}
 .scr .prog-track{height:8px;border-radius:99px;background:#edf0f2;overflow:hidden}
 .scr .prog-bar{height:100%;border-radius:99px;background:#16A34A}
+.scr .prog-bar.half{background:#F5A623}
 .scr .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:none;cursor:pointer;font-family:inherit;font-weight:700;font-size:16.5px;min-height:52px;padding:14px 26px;border-radius:15px;width:100%;background:#16A34A;color:#fff;box-shadow:0 12px 28px rgba(22,163,74,.42)}
 .scr .btn .arrow{flex:none}
 .scr .transparenz{margin-top:18px;padding-top:16px;border-top:1px solid #e4e7ea;text-align:center;font-size:12px;color:#5b6570;font-weight:500;line-height:1.5}
@@ -91,26 +88,22 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 .scr .teilb-card h3{font-size:15.5px;font-weight:800;letter-spacing:-.01em;margin-bottom:4px}
 .scr .teilb-card p{font-size:12.5px;color:#5b6570;font-weight:500;margin-bottom:10px;max-width:360px;margin-left:auto;margin-right:auto}
 
-/* Nachher: neue Elemente im LP-Look */
-.scr .nh{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:2px 4px 4px}
+/* Nachher: neue Elemente im LP-Look – Gelb (#F5A623) = halb, Grün erst bei 100 % */
+.scr .nh{display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding:2px 4px 10px}
 .scr .saved{display:inline-flex;align-items:center;gap:8px;font-size:13px;white-space:nowrap;font-weight:600;color:#14181c}
-.scr .saved .tick{width:22px;height:22px;border-radius:50%;background:#16A34A;color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;flex:none}
+.scr .saved .tick{width:22px;height:22px;border-radius:50%;background:#F5A623;color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center;flex:none}
 .scr .ring-wrap{position:relative;width:136px;height:136px;margin:2px auto 0}
 .scr .ring{width:136px;height:136px;transform:rotate(-90deg)}
 .scr .ring circle{fill:none;stroke-width:11}
 .scr .ring-track{stroke:#edf0f2}
-.scr .ring-arc{stroke:#16A34A;stroke-linecap:round;stroke-dasharray:364.42;stroke-dashoffset:182.21}
+.scr .ring-arc{stroke:#F5A623;stroke-linecap:round;stroke-dasharray:364.42;stroke-dashoffset:182.21}
 .scr .ring-txt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;line-height:1.05}
 .scr .ring-txt b{font-size:31px;font-weight:800;letter-spacing:-.03em;color:#14181c;font-variant-numeric:tabular-nums}
 .scr .ring-txt .lbl{font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#5b6570;margin-top:3px}
 .scr .nh h2{font-size:22px;font-weight:800;letter-spacing:-.02em;line-height:1.25;text-wrap:balance;max-width:330px}
-.scr .nh .q{font-size:26px;line-height:1.2;margin-top:6px}
-.scr .nh .sub{font-size:14.5px;font-weight:500;color:#5b6570;max-width:320px;margin-top:-4px}
-.scr .bignum{display:flex;flex-direction:column;align-items:center;line-height:1;margin-top:4px}
-.scr .bignum b{font-size:74px;font-weight:800;letter-spacing:-.04em;color:#16A34A}
-.scr .bignum span{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#5b6570;margin-top:2px}
-.scr .fields{font-size:12.5px;font-weight:700;color:#5b6570;margin-top:-2px;text-wrap:balance}
-.scr .micro{font-size:12px;font-weight:500;color:#5b6570;line-height:1.5}
+.scr .nh h2 .hl{color:#16A34A;white-space:nowrap}
+.scr .nh .q{font-size:25px;line-height:1.2}
+.scr .rest{font-size:13px;font-weight:600;color:#5b6570;margin-top:-4px}
 .scr .nh .btn{margin-top:2px}
 .scr .cta-pulse{position:relative;overflow:hidden;animation:ctaPulse 2.4s ease-in-out infinite}
 .scr .cta-pulse::after{content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:ctaShine 3s ease-in-out infinite}
@@ -126,7 +119,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 .notes li{font-size:14px;line-height:1.5;padding-left:16px;position:relative}
 .notes li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;border-radius:50%;background:var(--acc)}
 .notes li b{font-weight:700}
-.notes li.warn::before{background:var(--warn)}
+.notes li.half::before{background:#F5A623}
 .foot{margin-top:40px;font-size:12.5px;color:var(--soft);font-weight:500}
 
 @media (prefers-reduced-motion: reduce){
@@ -138,9 +131,9 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 <div class="wrap">
 
   <header class="head">
-    <p class="eyebrow">GreenCareers · Bewerber-Landingpage · Vorschlag 14.09.2026</p>
+    <p class="eyebrow">GreenCareers · Bewerber-Landingpage · Vorschlag 14.09.2026 · Fassung 2</p>
     <h1>Danke-Seite: Profil auf 100 %</h1>
-    <p class="lede">Nach dem Kontakt-Formular sagt die Seite heute dreimal „fertig“ – Label, voller Balken, großer Haken. Der Vorschlag sagt „halb“ und zeigt, was der Bewerber für eine Minute mehr bekommt. Live-Stand: <a href="https://job-angebot.green-careers.de" target="_blank" rel="noopener">job-angebot.green-careers.de</a></p>
+    <p class="lede">Nach dem Kontakt-Formular sagt die Seite heute dreimal „fertig“ – Label, voller Balken, großer Haken. Der Vorschlag sagt „halb“, in Gelb, und nennt den Anreiz fürs Weitermachen. Live-Stand: <a href="https://job-angebot.green-careers.de" target="_blank" rel="noopener">job-angebot.green-careers.de</a></p>
   </header>
 
   <section class="compare" aria-label="Vorher und Nachher">
@@ -171,54 +164,41 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
       <div class="col-cap">
         <span class="pill new">Vorschlag</span>
         <div class="tabs" role="tablist" aria-label="Variante wählen">
-          <button role="tab" aria-selected="true" data-v="a">A · Prozent</button>
+          <button role="tab" aria-selected="true" data-v="a">A · Anreiz</button>
           <button role="tab" aria-selected="false" data-v="b">B · Frage</button>
-          <button role="tab" aria-selected="false" data-v="c">C · Zahl</button>
         </div>
       </div>
       <div class="ph"><div class="ph-scr"><div class="scr">
         <div class="ov-head"><img src="logo.png" alt="GreenCareers"><span class="ov-close" aria-hidden="true">×</span></div>
-        <div class="prog"><div class="prog-label"><span>Dein Profil</span><span><span class="cnt">0</span> %</span></div><div class="prog-track"><div class="prog-bar" id="nhBar" style="width:0%"></div></div></div>
+        <div class="prog"><div class="prog-label"><span>Dein Profil</span><span><span class="cnt">0</span> %</span></div><div class="prog-track"><div class="prog-bar half" id="nhBar" style="width:0%"></div></div></div>
 
-        <!-- A: Ring -->
+        <!-- A: Anreiz-Satz -->
         <div class="nh v" data-v="a">
           <p class="saved"><span class="tick">✓</span>Danke, Jana – Bewerbung gespeichert.</p>
           <div class="ring-wrap" aria-label="Profil zu 50 Prozent vollständig">
             <svg class="ring" viewBox="0 0 136 136" aria-hidden="true"><circle class="ring-track" cx="68" cy="68" r="58"/><circle class="ring-arc" id="ringArc" cx="68" cy="68" r="58"/></svg>
             <div class="ring-txt"><b><span class="cnt">0</span> %</b><span class="lbl">vollständig</span></div>
           </div>
-          <h2>Betriebe rufen dich an, wenn sie sehen, was du kannst.</h2>
-          <button type="button" class="btn cta-pulse">Profil auf 100 % bringen <span class="arrow">→</span></button>
-          <p class="fields">Wunschgehalt · Umkreis · Erfahrung · Start</p>
-          <p class="micro">10 Fragen zum Antippen · ca. 1 Minute<br>7 von 10 Bewerbern machen weiter.</p>
+          <h2>Vollständige Profile werden <span class="hl">2× so oft</span> von Top-Betrieben kontaktiert.</h2>
+          <button type="button" class="btn cta-pulse">Profil vervollständigen <span class="arrow">→</span></button>
+          <p class="rest">Nur noch 10 Fragen. Dauert unter 1 Minute.</p>
         </div>
 
         <!-- B: Frage -->
         <div class="nh v" data-v="b" hidden>
           <p class="saved"><span class="tick">✓</span>Danke, Jana – Bewerbung gespeichert.</p>
-          <h2 class="q">Willst du, dass Betriebe dich anrufen?</h2>
-          <p class="sub">Dann zeig ihnen, was du kannst – 10 Fragen, 1 Minute.</p>
-          <button type="button" class="btn cta-pulse">Ja, will ich <span class="arrow">→</span></button>
-          <p class="fields">Wunschgehalt · Umkreis · Erfahrung · Start</p>
-          <p class="micro">7 von 10 Bewerbern machen weiter.</p>
+          <div class="ring-wrap" aria-label="Profil zu 50 Prozent vollständig">
+            <svg class="ring" viewBox="0 0 136 136" aria-hidden="true"><circle class="ring-track" cx="68" cy="68" r="58"/><circle class="ring-arc" id="ringArcB" cx="68" cy="68" r="58"/></svg>
+            <div class="ring-txt"><b><span class="cnt">0</span> %</b><span class="lbl">vollständig</span></div>
+          </div>
+          <h2 class="q">Willst du, dass Top-Betriebe dich <span class="hl">2× so oft</span> kontaktieren?</h2>
+          <button type="button" class="btn cta-pulse">Profil vervollständigen <span class="arrow">→</span></button>
+          <p class="rest">Nur noch 10 Fragen. Dauert unter 1 Minute.</p>
         </div>
-
-        <!-- C: Zahl ohne Beleg -->
-        <div class="nh v" data-v="c" hidden>
-          <p class="saved"><span class="tick">✓</span>Danke, Jana – Bewerbung gespeichert.</p>
-          <div class="bignum"><b>2×</b><span>deine Chancen</span></div>
-          <h2>Vollständige Profile werden doppelt so oft angerufen.</h2>
-          <button type="button" class="btn cta-pulse">Chancen verdoppeln <span class="arrow">→</span></button>
-          <p class="fields">Wunschgehalt · Umkreis · Erfahrung · Start</p>
-          <p class="micro">10 Fragen zum Antippen · ca. 1 Minute</p>
-        </div>
-
-        <p class="transparenz">Du bewirbst dich nicht auf eine einzelne Stelle, sondern kommst in unseren Bewerberpool: Passende Betriebe aus deiner Region melden sich direkt bei dir – 100 % diskret.</p>
       </div></div></div>
 
-      <p class="why" data-why="a"><b>Empfehlung.</b> Der Ring ist das große Element: eine Zahl, die „halb“ sagt. Ein Satz Nutzen, ein Button, Rest Kleingedrucktes.</p>
-      <p class="why" data-why="b" hidden><b>Frage-geführt.</b> Freddys „Willst du …?“-Ansatz: die Frage ist das große Element, der Ja-Button die Zusage.</p>
-      <p class="warnbox" data-why="c" hidden>„2×“ ist erfunden – dazu gibt es keine Messung. Nur zur Ansicht, nicht zum Bauen.</p>
+      <p class="why" data-why="a"><b>Freddys Fassung.</b> Gelb bis 100 %, Anreiz-Satz mit Zahl, Button „Profil vervollständigen“, darunter nur Restzahl und Dauer. Kein Bewerberpool-Hinweis mehr.</p>
+      <p class="why" data-why="b" hidden><b>Gleicher Aufbau,</b> Kopfzeile als Frage statt Aussage.</p>
     </div>
   </section>
 
@@ -226,48 +206,48 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
     <div>
       <h3>Was sich ändert</h3>
       <ul>
-        <li><b>„Fertig“ raus.</b> Label, voller Balken und großer Haken sagen dreimal „du bist durch“. Neu: Balken auf 50 %, kleiner Haken nur für „gespeichert“.</li>
-        <li><b>Ein großes Element,</b> ein Satz, ein Button – keine Karte in der Karte mehr. Der Button ist die einzige Aktion.</li>
-        <li><b>Nutzen statt Bitte.</b> „Damit GreenCareers dir ein Angebot machen kann“ wird zu „Betriebe rufen dich an, wenn sie sehen, was du kannst“.</li>
-        <li><b>Echte Zahl statt „2 schnelle Fragen“.</b> Teil B hat 10 Fragen – dafür alle zum Antippen, Nachricht optional.</li>
+        <li class="half"><b>„Fertig“ raus, „halb“ rein.</b> Balken, Ring und Haken sind gelb, solange das Profil bei 50 % steht. Grün gibt es erst bei 100 %.</li>
+        <li><b>Ein Anreiz-Satz mit Zahl</b> statt Erklärtext: „Vollständige Profile werden 2× so oft von Top-Betrieben kontaktiert.“</li>
+        <li><b>Button „Profil vervollständigen“,</b> darunter nur die Restzahl: „Nur noch 10 Fragen. Dauert unter 1 Minute.“</li>
+        <li><b>Alles andere weg:</b> kein Kasten in der Karte, kein Bewerberpool-Hinweis – die Einwilligung liegt seit dem Kontakt-Formular vor.</li>
       </ul>
     </div>
     <div>
       <h3>Woher die Zahlen kommen</h3>
       <ul>
-        <li><b>50 %:</b> Teil 1 von 2 ist erledigt (Bewerbung), Teil 2 (Profil) fehlt. In Teil B läuft der Balken von 50 auf 100 % weiter – heute springt er auf 9 % zurück.</li>
-        <li><b>10 Fragen, ca. 1 Minute:</b> Qualifikation, Herkunft, Erfahrung, Deutsch, Umkreis, Gehalt, Benefits, Scheine, Start, Situation – plus optionale Nachricht.</li>
-        <li><b>7 von 10:</b> Teil-B-Abschlussquote der v2-Seite liegt bei rund 68 % (Funnel-Events). Janas Wochenend-Zählung (30 % ohne Angaben) passt dazu.</li>
-        <li class="warn"><b>2× (Variante C):</b> keine Datenbasis. Wer damit bauen will, braucht erst eine Messung.</li>
+        <li><b>50 %:</b> Teil 1 von 2 (Bewerbung) erledigt, Teil 2 (Profil) offen. In Teil B läuft der Balken von 50 auf 100 % weiter – heute springt er auf 9 % zurück.</li>
+        <li><b>10 Fragen:</b> Teil B real – Qualifikation, Herkunft, Erfahrung, Deutsch, Umkreis, Gehalt, Benefits, Scheine, Start, Situation. Die Nachricht am Ende ist optional.</li>
+        <li><b>Unter 1 Minute:</b> 10 Screens mit Einblendung, ein Gehalts-Regler, zwei Mehrfachauswahlen. „20 Sekunden“ wäre erst mit 4–5 Fragen ehrlich.</li>
+        <li class="half"><b>2× so oft:</b> gesetzter Anreiz, keine gemessene Quote.</li>
       </ul>
     </div>
     <div>
       <h3>Umsetzung</h3>
       <ul>
-        <li>Betrifft nur den Screen nach dem Kontakt-Formular und die Fortschritts-Werte in Teil B. Fragen, Webhook, Make und Sheet bleiben unverändert.</li>
-        <li>Gleiche Stelle im Code auf allen drei job-angebot-Seiten: GaLaBau (grün), Tiefbau (grey), Landwirtschaft (gold).</li>
-        <li><b>Janas Option 2</b> (Berufserfahrung vor dem Standort abfragen) ist davon unabhängig: ein Extra-Schritt vor dem Kontakt-Gate sichert die wichtigste Angabe, kann aber Leads kosten. Sauber nur als Test: eine Kampagne mit, eine ohne.</li>
+        <li>Nur der Screen nach dem Kontakt-Formular. Dazu: Bewerberpool-Zeile im Fertig-Modus ausblenden, Fortschritt in Teil B von 50 auf 100 % zählen, auf dem Screen „Profil vollständig“ von Gelb auf Grün wechseln.</li>
+        <li>Gleiche Stelle auf allen drei job-angebot-Seiten. Achtung Landwirtschaft: dort ist Gold die Markenfarbe – „halb“ braucht dort eine andere Farbe.</li>
+        <li><b>Janas Option 2</b> (Berufserfahrung vor dem Standort abfragen) bleibt unabhängig: sichert die wichtigste Angabe, kann aber Leads kosten. Sauber nur als Test: eine Kampagne mit, eine ohne.</li>
       </ul>
     </div>
   </section>
 
-  <p class="foot">Quelle: Screen „s-done“ der Live-Seite · Name „Jana“ als Beispiel · GreenCareers intern, Stand 14.09.2026</p>
+  <p class="foot">Quelle: Screen „s-done“ der Live-Seite · Name „Jana“ als Beispiel · GreenCareers intern, Stand 14.09.2026 abends</p>
 </div>
 
 <script>
 (function(){
   var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var bar=document.getElementById('nhBar');
-  var arc=document.getElementById('ringArc');
+  var arcs=document.querySelectorAll('.ring-arc');
   var counters=document.querySelectorAll('.cnt');
   var timer=null;
-
   var CIRC=364.42;
+
   function setState(p){ // p = 0..1 des Weges bis 50 %
     var pct=Math.round(50*p);
     counters.forEach(function(c){ c.textContent=pct; });
     bar.style.width=(50*p)+'%';
-    if(arc) arc.style.strokeDashoffset=String(CIRC-(CIRC/2)*p);
+    arcs.forEach(function(a){ a.style.strokeDashoffset=String(CIRC-(CIRC/2)*p); });
   }
 
   function play(){
