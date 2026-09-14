@@ -104,10 +104,10 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 .scr .nh h2 .hl{color:#16A34A;white-space:nowrap}
 .scr .nh .q{font-size:25px;line-height:1.2}
 .scr .rest{font-size:13px;font-weight:600;color:#5b6570;margin-top:-4px}
-.scr .nh .btn{margin-top:2px}
-.scr .cta-pulse{position:relative;overflow:hidden;animation:ctaPulse 2.4s ease-in-out infinite}
+.scr .nh .btn{margin-top:4px;min-height:60px;font-size:18px;border-radius:17px;box-shadow:0 14px 34px rgba(22,163,74,.5),0 0 0 6px rgba(22,163,74,.12)}
+.scr .cta-pulse{position:relative;overflow:hidden;animation:ctaPulse 2.2s ease-in-out infinite}
 .scr .cta-pulse::after{content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;background:linear-gradient(115deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:ctaShine 3s ease-in-out infinite}
-@keyframes ctaPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+@keyframes ctaPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 @keyframes ctaShine{0%{left:-80%}55%{left:130%}100%{left:130%}}
 .v[hidden]{display:none}
 
@@ -131,7 +131,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
 <div class="wrap">
 
   <header class="head">
-    <p class="eyebrow">GreenCareers · Bewerber-Landingpage · Vorschlag 14.09.2026 · Fassung 2</p>
+    <p class="eyebrow">GreenCareers · Bewerber-Landingpage · Vorschlag 14.09.2026 · Fassung 3</p>
     <h1>Danke-Seite: Profil auf 100 %</h1>
     <p class="lede">Nach dem Kontakt-Formular sagt die Seite heute dreimal „fertig“ – Label, voller Balken, großer Haken. Der Vorschlag sagt „halb“, in Gelb, und nennt den Anreiz fürs Weitermachen. Live-Stand: <a href="https://job-angebot.green-careers.de" target="_blank" rel="noopener">job-angebot.green-careers.de</a></p>
   </header>
@@ -165,7 +165,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
         <span class="pill new">Vorschlag</span>
         <div class="tabs" role="tablist" aria-label="Variante wählen">
           <button role="tab" aria-selected="true" data-v="a">A · Anreiz</button>
-          <button role="tab" aria-selected="false" data-v="b">B · Frage</button>
+          <button role="tab" aria-selected="false" data-v="b">B · Alternative</button>
         </div>
       </div>
       <div class="ph"><div class="ph-scr"><div class="scr">
@@ -179,7 +179,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
             <svg class="ring" viewBox="0 0 136 136" aria-hidden="true"><circle class="ring-track" cx="68" cy="68" r="58"/><circle class="ring-arc" id="ringArc" cx="68" cy="68" r="58"/></svg>
             <div class="ring-txt"><b><span class="cnt">0</span> %</b><span class="lbl">vollständig</span></div>
           </div>
-          <h2>Vollständige Profile werden <span class="hl">2× so oft</span> von Top-Betrieben kontaktiert.</h2>
+          <h2><span class="hl">Verdoppel</span> deine Chance auf einen Anruf vom Top-Betrieb.</h2>
           <button type="button" class="btn cta-pulse">Profil vervollständigen <span class="arrow">→</span></button>
           <p class="rest">Nur noch 10 Fragen. Dauert unter 1 Minute.</p>
         </div>
@@ -191,14 +191,14 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
             <svg class="ring" viewBox="0 0 136 136" aria-hidden="true"><circle class="ring-track" cx="68" cy="68" r="58"/><circle class="ring-arc" id="ringArcB" cx="68" cy="68" r="58"/></svg>
             <div class="ring-txt"><b><span class="cnt">0</span> %</b><span class="lbl">vollständig</span></div>
           </div>
-          <h2 class="q">Willst du, dass Top-Betriebe dich <span class="hl">2× so oft</span> kontaktieren?</h2>
+          <h2><span class="hl">Doppelte Chance,</span> dass sich der passende Betrieb bei dir meldet.</h2>
           <button type="button" class="btn cta-pulse">Profil vervollständigen <span class="arrow">→</span></button>
           <p class="rest">Nur noch 10 Fragen. Dauert unter 1 Minute.</p>
         </div>
       </div></div></div>
 
-      <p class="why" data-why="a"><b>Freddys Fassung.</b> Gelb bis 100 %, Anreiz-Satz mit Zahl, Button „Profil vervollständigen“, darunter nur Restzahl und Dauer. Kein Bewerberpool-Hinweis mehr.</p>
-      <p class="why" data-why="b" hidden><b>Gleicher Aufbau,</b> Kopfzeile als Frage statt Aussage.</p>
+      <p class="why" data-why="a"><b>Freddys Fassung.</b> Gelb bis 100 %. Chance statt Häufigkeit: „Verdoppel deine Chance auf einen Anruf vom Top-Betrieb“ – ein Anruf, nicht viele. Button größer, darunter nur Restzahl und Dauer.</p>
+      <p class="why" data-why="b" hidden><b>Gleicher Aufbau,</b> Satz als Zustand statt Aufforderung: „Doppelte Chance, dass sich der passende Betrieb bei dir meldet.“</p>
     </div>
   </section>
 
@@ -207,7 +207,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
       <h3>Was sich ändert</h3>
       <ul>
         <li class="half"><b>„Fertig“ raus, „halb“ rein.</b> Balken, Ring und Haken sind gelb, solange das Profil bei 50 % steht. Grün gibt es erst bei 100 %.</li>
-        <li><b>Ein Anreiz-Satz mit Zahl</b> statt Erklärtext: „Vollständige Profile werden 2× so oft von Top-Betrieben kontaktiert.“</li>
+        <li><b>Ein Anreiz-Satz</b> statt Erklärtext: „Verdoppel deine Chance auf einen Anruf vom Top-Betrieb.“ Bewusst „Chance“ und „ein Anruf“ – nicht „doppelt so oft kontaktiert“, sonst fürchtet der Bewerber Dauer-Anrufe.</li>
         <li><b>Button „Profil vervollständigen“,</b> darunter nur die Restzahl: „Nur noch 10 Fragen. Dauert unter 1 Minute.“</li>
         <li><b>Alles andere weg:</b> kein Kasten in der Karte, kein Bewerberpool-Hinweis – die Einwilligung liegt seit dem Kontakt-Formular vor.</li>
       </ul>
@@ -218,7 +218,7 @@ h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15;text-wr
         <li><b>50 %:</b> Teil 1 von 2 (Bewerbung) erledigt, Teil 2 (Profil) offen. In Teil B läuft der Balken von 50 auf 100 % weiter – heute springt er auf 9 % zurück.</li>
         <li><b>10 Fragen:</b> Teil B real – Qualifikation, Herkunft, Erfahrung, Deutsch, Umkreis, Gehalt, Benefits, Scheine, Start, Situation. Die Nachricht am Ende ist optional.</li>
         <li><b>Unter 1 Minute:</b> 10 Screens mit Einblendung, ein Gehalts-Regler, zwei Mehrfachauswahlen. „20 Sekunden“ wäre erst mit 4–5 Fragen ehrlich.</li>
-        <li class="half"><b>2× so oft:</b> gesetzter Anreiz, keine gemessene Quote.</li>
+        <li class="half"><b>Verdoppeln:</b> gesetzter Anreiz, keine gemessene Quote.</li>
       </ul>
     </div>
     <div>
